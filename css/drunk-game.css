@@ -1,0 +1,98 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.drunk-game {
+  background: #009400 url("../img/drunk-game.gif") repeat;
+  border: 2px solid #006000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 800px;
+  height: 600px;
+  margin: 10% auto;
+  position: relative;
+}
+.drunk-game-deck {
+  width: 130px;
+  height: 190px;
+  position: absolute;
+}
+.drunk-game__card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 130px;
+  height: 190px;
+  position: absolute;
+  border: 1px solid #152941;
+}
+.drunk-game__card_side_shirt {
+  background: url("../img/drunk-game__card_side_shirt.png") repeat;
+}
+.drunk-game__card_side_shirt .rank,
+.drunk-game__card_side_shirt .rank-bottom,
+.drunk-game__card_side_shirt .suit {
+  display: none;
+}
+.drunk-game__card_clickable {
+  cursor: pointer;
+}
+.drunk-game__card_light {
+  border: 1px solid #ffffb4;
+}
+.drunk-game__card_side_front {
+  font-size: 28px;
+}
+.drunk-game__card_side_front .rank,
+.drunk-game__card_side_front .rank-bottom {
+  text-transform: uppercase;
+  position: absolute;
+}
+.drunk-game__card_side_front .rank {
+  top: 7px;
+  left: 7px;
+}
+.drunk-game__card_side_front .rank-bottom {
+  bottom: 7px;
+  right: 7px;
+}
+.drunk-game__card_side_front .suit {
+  font-size: 56px;
+  width: 100%;
+  position: absolute;
+  line-height: 0;
+  text-align: center;
+  top: 50%;
+}
+.drunk-game__card_suit_diamonds .suit:after {
+  content: '♦';
+  color: red;
+}
+.drunk-game__card_suit_hearts .suit:after {
+  content: '♥';
+  color: red;
+}
+.drunk-game__card_suit_clubs .suit:after {
+  content: '♣';
+  color: black;
+}
+.drunk-game__card_suit_spades .suit:after {
+  content: '♠';
+  color: black;
+}
+.drunk-game__player {
+  background-color: #006000;
+  color: #fff;
+  font-size: 17px;
+  position: absolute;
+  padding: .2em .4em;
+  line-height: 1;
+}
+.drunk-game__player .score {
+  margin-left: 1em;
+}
+.drunk-game__player .name-value,
+.drunk-game__player .score-value {
+  font-style: normal;
+  margin-left: .2em;
+}

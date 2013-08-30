@@ -1,0 +1,137 @@
+// константы
+@game_width: 800px;
+@game_height: 600px;
+
+@card_width: 130px;
+@card_height: 190px;
+@card_radius: 8px;
+
+@font-size: 14px;
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+
+// игровая область
+.drunk-game {
+  background: #009400 url("../img/drunk-game.gif") repeat;
+  border: 2px solid #006000;
+  font-family: Arial, sans-serif;
+  font-size: @font-size;
+  width: @game_width;
+  height: @game_height;
+  margin: 10% auto;
+  position: relative;
+}
+
+// колода карт
+.drunk-game-deck {
+  width: @card_width;
+  height: @card_height;
+  position: absolute;
+}
+
+// игральная карта
+.drunk-game__card {
+  background-color: #fff;
+  border-radius: @card_radius;
+  width: @card_width;
+  height: @card_height;
+  position: absolute;
+  border: 1px solid #152941;
+}
+
+// строна карты с рубашкой
+.drunk-game__card_side_shirt {
+  background: url("../img/drunk-game__card_side_shirt.png") repeat;
+
+  .rank, .rank-bottom, .suit {
+    display: none;
+  }
+}
+
+.drunk-game__card_clickable {
+  cursor: pointer;
+}
+
+.drunk-game__card_light {
+  border: 1px solid #ffffb4;
+}
+
+// лицевая сторона карты
+.drunk-game__card_side_front {
+  font-size: @font-size * 2;
+
+  .rank, .rank-bottom {
+    text-transform: uppercase;
+    position: absolute;
+  }
+
+  @padd: 7px;
+
+  .rank {
+    top: @padd;
+    left: @padd;
+  }
+
+  .rank-bottom {
+    bottom: @padd;
+    right: @padd;
+  }
+
+  .suit {
+    font-size: @font-size * 4;
+    width: 100%;
+    position: absolute;
+    line-height: 0;
+    text-align: center;
+    top: 50%;
+  }
+}
+
+// модификаторы мастей
+.drunk-game__card_suit_diamonds .suit:after {
+  content: '♦';
+  color: red;
+}
+
+.drunk-game__card_suit_hearts .suit:after {
+  content: '♥';
+  color: red;
+}
+
+.drunk-game__card_suit_clubs .suit:after {
+  content: '♣';
+  color: black;
+}
+
+.drunk-game__card_suit_spades .suit:after {
+  content: '♠';
+  color: black;
+}
+
+// игрок
+.drunk-game__player {
+  background-color: #006000;
+  color: #fff;
+  font-size: @font-size + 3;
+  position: absolute;
+  padding: .2em .4em;
+  line-height: 1;
+
+  .name {
+
+  }
+
+  .score {
+    margin-left: 1em;
+  }
+
+  .name-value, .score-value {
+    font-style: normal;
+    margin-left: .2em;
+  }
+}
