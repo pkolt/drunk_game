@@ -21,5 +21,5 @@
 
 ## Тестовые страницы
 
-* [Равные условия игры](index.html)
-* [Больше шансов к победе](index-test.html)
+* [Равные условия игры](http://pkolt.github.io/drunk_game/index.html)
+* [Больше шансов к победе](http://pkolt.github.io/drunk_game/index-test.html)
